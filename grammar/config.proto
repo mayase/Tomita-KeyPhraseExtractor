@@ -1,0 +1,25 @@
+encoding "utf8"; // указываем кодировку, в которой написан конфигурационный файл
+
+TTextMinerConfig {
+  Dictionary = "./grammar/mydic.gzt"; // путь к корневому словарю
+  
+  PrettyOutput = "./temp/result.html"; // путь к файлу с отладочным выводом в удобном для чтения виде
+
+  Input = {
+    File = "./temp/text.txt"; // путь к входному файлу
+  }
+  Output = {    
+	Format = text;   // Если не задано — то xml
+	Encoding = 'utf8';
+  }
+  Articles = [
+    { Name = "мусор" }
+    { Name = "сущ"}
+    { Name = "сущ_сущ"}
+    { Name = "прил_сущ"}
+    { Name = "NNP"}
+    { Name = "имя"}
+  ]
+}
+
+
